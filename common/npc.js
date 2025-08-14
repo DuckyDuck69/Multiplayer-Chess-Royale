@@ -1,5 +1,5 @@
-import Move from "./move";
-import State from "./chess";
+import Move from "./move.js";
+import State from "./chess.js";
 
 
 export default class NPC{
