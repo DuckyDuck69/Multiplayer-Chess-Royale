@@ -3,7 +3,7 @@
 // import { Noise } from "./lib/noisejs.js";
 
 //import { Noise } from "noisejs";
-import { io } from "socket.io-client";
+//import { io } from "socket.io-client";
 
 const noise = new window.Noise(0xc4ee5);
 
@@ -19,12 +19,12 @@ import NPC from "../common/npc.js";
 
 let state = new State(160, 160);
 let owners = {};
-let socket, stateSum;
+let stateSum;
 let owner = null;
 // Store currently active upgrade modal to prevent duplicates
 let activeUpgradeModal = null;
 
-
+const socket = window.io(undefined, { query: { session } });
 const start = Date.now();
 
 function logDateTime() {
