@@ -140,7 +140,7 @@ app.post("/new", (req, res) => {
     if (
         username &&
         username.length < 16 &&
-        username.length > 3 &&
+        username.length > 0 &&
         color &&
         COLORS.includes(color)
     ) {
