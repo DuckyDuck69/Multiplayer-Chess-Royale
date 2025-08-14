@@ -30,9 +30,10 @@ const app = express();
 app.get("/", (req, res) => {
     res.redirect("/login.html");
 });
-app.use(express.static("dist"));
-app.use(express.static("client"));
+app.use(express.static(path.join(__dirname, "..", "client")));
 app.use("/common", express.static(path.join(__dirname, "..", "common")));
+app.use(express.static(path.join(__dirname, "..", "dist")));
+
 
 
 
