@@ -4,7 +4,7 @@
     "description": "Chess royale project",
     "type": "module",
     "scripts": {
-        "start": "node server.js",
+        "start": "node  server/index.js",
         "dev:client": "parcel watch --no-cache --log-level warn client/login.html client/index.html client/tutorial.html",
         "dev:server": "nodemon --quiet --watch server --watch common server/index.js",
         "copy:remove": "rimraf dist",
