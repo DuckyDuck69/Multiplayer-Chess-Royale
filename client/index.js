@@ -19,12 +19,12 @@ import NPC from "../common/npc.js";
 
 let state = new State(160, 160);
 let owners = {};
-let stateSum;
+let socket, stateSum;
 let owner = null;
 // Store currently active upgrade modal to prevent duplicates
 let activeUpgradeModal = null;
 
-const socket = window.io(undefined, { query: { session } });
+
 const start = Date.now();
 
 function logDateTime() {
@@ -47,7 +47,7 @@ async function init() {
 
     // Create a socket.io client instance (this will automatically connect to
     // the socket.io server).
-    socket = io(undefined, { query: { session } });
+    socket = window.io({ query: { session } });
 
     // This will be called when the socket gets connected.
     socket.on("connect", () => {
