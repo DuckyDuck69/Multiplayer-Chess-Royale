@@ -221,7 +221,7 @@ io.on("connection", (socket) => {
 });
 
 // This will have the server listen on the port provided at the top of the file.
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
     // This is a special javascript format string! Use the characters `` and insert
     // a ${} to have any variable concatenated into the string. It is similar to an
     // f-string in python.
