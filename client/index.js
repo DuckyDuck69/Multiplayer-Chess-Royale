@@ -1,6 +1,6 @@
 // This imports the socket.io client code
 import { io } from "socket.io-client";
-import { Noise } from "noisejs";
+import { Noise } from "./lib/noisejs.js";
 
 const noise = new Noise(0xc4ee5);
 
