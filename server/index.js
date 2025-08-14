@@ -27,6 +27,8 @@ app.get("/", (req, res) => {
 });
 app.use(express.static("dist"));
 app.use(express.static("client"));
+app.use("/common", express.static(path.join(__dirname, "common")));
+
 
 // This is a little complicated, but this allows us to send data to the server in
 // JSON (JavaScript Object Notaton) to the server.
