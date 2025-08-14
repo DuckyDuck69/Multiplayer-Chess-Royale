@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 });
 app.use(express.static(path.join(__dirname, "..", "client")));
 app.use("/common", express.static(path.join(__dirname, "..", "common")));
-app.use(express.static(path.join(__dirname, "..", "dist")));
+//app.use(express.static(path.join(__dirname, "..", "dist")));
 
 
 

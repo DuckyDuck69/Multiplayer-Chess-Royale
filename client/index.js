@@ -9,12 +9,12 @@ const noise = new Noise(0xc4ee5);
 
 // This imports the INCREMENT value from the /common/chess.js file. Files in the
 // /common directory should be accessible from both the client and server.
-import State, { COLOR_VALUES, COLORS, WHITE_OWNER, NPC_OWNER } from "../common/chess";
+import State, { COLOR_VALUES, COLORS, WHITE_OWNER, NPC_OWNER } from "../common/chess.js";
 import { ObstacleType } from "../common/obstacle";
-import Piece, { PieceTags, PieceType } from "../common/piece";
-import Move from "../common/move";
-import { XP_LEVEL } from "../common/piece";
-import NPC from "../common/npc";
+import Piece, { PieceTags, PieceType } from "../common/piece.js";
+import Move from "../common/move.js";
+import { XP_LEVEL } from "../common/piece.js";
+import NPC from "../common/npc.js";
 
 let state = new State(160, 160);
 let owners = {};
