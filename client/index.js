@@ -2,10 +2,11 @@
 // import { io } from "socket.io-client";
 // import { Noise } from "./lib/noisejs.js";
 
-import { Noise } from "noisejs";
+//import { Noise } from "noisejs";
 import { io } from "socket.io-client";
 
-const noise = new Noise(0xc4ee5);
+const noise = new window.Noise(0xc4ee5);
+
 
 // This imports the INCREMENT value from the /common/chess.js file. Files in the
 // /common directory should be accessible from both the client and server.
