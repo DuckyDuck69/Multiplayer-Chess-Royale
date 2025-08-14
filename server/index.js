@@ -13,6 +13,10 @@ import { Server } from "socket.io";
 import Move from "../common/move.js";
 import { readFile, writeFile } from "fs/promises";
 import { readFileSync } from "fs";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // The port that the web server runs on.
 const PORT = process.env.PORT || 8080;
