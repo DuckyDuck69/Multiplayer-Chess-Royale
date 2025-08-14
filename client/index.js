@@ -2,15 +2,15 @@
 // import { io } from "socket.io-client";
 // import { Noise } from "./lib/noisejs.js";
 
-import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
-import { Noise } from "https://esm.sh/noisejs@2";
+import { Noise } from "noisejs";
+import { io } from "socket.io-client";
 
 const noise = new Noise(0xc4ee5);
 
 // This imports the INCREMENT value from the /common/chess.js file. Files in the
 // /common directory should be accessible from both the client and server.
 import State, { COLOR_VALUES, COLORS, WHITE_OWNER, NPC_OWNER } from "../common/chess.js";
-import { ObstacleType } from "../common/obstacle";
+import { ObstacleType } from "../common/obstacle.js";
 import Piece, { PieceTags, PieceType } from "../common/piece.js";
 import Move from "../common/move.js";
 import { XP_LEVEL } from "../common/piece.js";
