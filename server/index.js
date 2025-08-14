@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
     res.redirect("/login.html");
 });
 app.use(express.static("dist"));
+app.use(express.static("client"));
 
 // This is a little complicated, but this allows us to send data to the server in
 // JSON (JavaScript Object Notaton) to the server.
